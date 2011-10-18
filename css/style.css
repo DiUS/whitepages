@@ -1,0 +1,14 @@
+body{
+	font-family: Helvetica Neue, Helvetica;
+}
+
+ul {
+	 list-style-type: none;
+	 padding-left: 0;
+}
+
+li {
+	margin: 3px 0;
+	padding: 3px 2px;
+	background-color: #e0e0e0;
+}
