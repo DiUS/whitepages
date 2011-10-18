@@ -1,0 +1,29 @@
+@mixin base {
+  font-family: Helvetica Neue, Helvetica;
+  margin-right: 20px;
+}
+
+body {
+  font-size: 30px;
+  ul {
+    list-style-type: none;
+    padding-left: 0,left;
+    li {
+      margin: 10px 5px 20px;
+      padding: 10px 5px;
+      background-color: #e0e0e0;
+      backgroundbox-shadow: 8px 8px 8px #aaa;
+      border-radius: 5px;
+      span {
+        display: block;
+      }
+    }
+  }
+  #content{
+    @include base;
+  }
+  #search{
+    @include base;
+  }
+}
+

@@ -1,0 +1,24 @@
+%html
+  %head
+    %title DiUS Whitepages
+    =stylesheet_link_tag 'style.css'
+    / The other functions are link_to, javascript_script_tag, and image_tag
+  %body
+    #search
+      %form{:name => "search", :id => "search", :action => "/search", :method => "get", :enctype => "text/plain"}
+        %input{:type => "text", :name => "term", :class => "text"}
+        %input{:type => "submit", :value => "Search", :class => "button"}
+    #content
+      %ul
+        %li
+          %span mitko
+          %span 0430 123 456
+        %li
+          %span ren
+          %span 0431 123 456
+        %li
+          %span stephen
+          %span 0431 123 456
+        %li
+          %span ken
+          %span 0431 123 456
