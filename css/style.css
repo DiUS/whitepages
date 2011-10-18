@@ -1,5 +1,18 @@
 body{
+	font-size: 30px;
+}
+
+#content{
 	font-family: Helvetica Neue, Helvetica;
+	margin-right: 20px;
+}
+
+input {
+	width: 40%;
+	height: 50px;
+}
+button {
+	font-size: 1em;
 }
 
 ul {
@@ -8,7 +21,13 @@ ul {
 }
 
 li {
-	margin: 3px 0;
-	padding: 3px 2px;
+	margin: 10px 5px 20px;
+	padding: 10px 5px;
 	background-color: #e0e0e0;
+	box-shadow: 8px 8px 8px #aaa;
+	border-radius: 5px;
+}
+
+li span {
+	display: block;
 }
