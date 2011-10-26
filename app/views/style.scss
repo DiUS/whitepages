@@ -9,18 +9,28 @@ body {
     list-style-type: none;
     padding-left: 0,left;
     li {
-      margin: 10px 5px 20px;
+      margin: 0px;
       padding: 10px 5px;
-      background-color: #e0e0e0;
-      backgroundbox-shadow: 8px 8px 8px #aaa;
+	  border-bottom: 1px solid #b9b9b9;
       border-radius: 5px;
-      span {
-        display: block;
-      }
     }
   }
   #content{
     @include base;
+	#contacts{
+		img {
+			display: inline-block;
+			width: 60px;
+			height:60px;
+		}
+		span {
+			display: inline-block;
+		}
+		span.name, span.number{
+			display: block;
+			line-height: 30px;
+		}
+	}
   }
   #search{
     @include base;
