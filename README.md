@@ -9,7 +9,7 @@ gem install bundler
 bundle install
 rake
 ```
-Visit http://localhost:4567
+Open http://localhost:9393
 
 Features
 ========
