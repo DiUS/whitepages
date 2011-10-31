@@ -46,10 +46,15 @@ fi
 #   rvm gemset import "$filename" | grep -v already | grep -v listed | grep -v complete | sed '/^$/d'
 # fi
 
+# Ensure that Bundler is installed, install it if it is not.
+if ! command -v bundle ; then
+  gem install bundler
+fi
+
 # If you use bundler, this might be useful to you:
-# if command -v bundle && [[ -s Gemfile ]]
-# then
-#   bundle install
-# fi
+if command -v bundle && [[ -s Gemfile ]]
+then
+  bundle install
+fi
 
 
