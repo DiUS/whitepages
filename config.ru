@@ -1,2 +1,2 @@
-require 'app/whitepages'
+require './whitepages'
 run Sinatra::Application
