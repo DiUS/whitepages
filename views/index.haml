@@ -1,5 +1,6 @@
 %html
   %head
+    %meta{:name => 'viewport', :content => 'user-scalable=no, width=device-width'}
     %title DiUS Whitepages
     =stylesheet_link_tag 'style.css'
     / The other functions are link_to, javascript_script_tag, and image_tag
@@ -11,7 +12,7 @@
       %ul#contacts
         - contacts.each do |contact|
           %li 
-            %img{:src => contact[:avatar]}
+            =image_tag contact['avatar']
             %span
-              %span.name= contact[:name] 
-              %span.number= contact[:number] 
+              %span.name= contact['name'] 
+              %span.number= contact['number'] 

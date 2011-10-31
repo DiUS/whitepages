@@ -17,6 +17,8 @@ h1 {
 }
 
 body {
+  max-device-width: 480px;
+  -webkit-text-size-adjust:none;
   font-size: 30px;
   ul {
     list-style-type: none;
