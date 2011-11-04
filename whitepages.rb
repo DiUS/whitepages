@@ -19,7 +19,7 @@ end
 
 def mockData
   data  = [
-    {:name => 'Ren', :number => '0431 123 456',},
+    {:name => 'Ren Shao', :number => '0431 123 456',},
     {:name => 'Mitko', :number => '0430 123 456'},
     {:name => 'Stephen', :number => '0430 123 456'},
     {:name => 'Ken', :number => '0430 123 456'}

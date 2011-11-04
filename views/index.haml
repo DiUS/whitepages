@@ -5,9 +5,12 @@
     =stylesheet_link_tag 'style.css'
     / The other functions are link_to, javascript_script_tag, and image_tag
   %body
-    %h1 DiUS whitepages
-    #search
-      %input#query{:type => "text", :name => "term", :class => "text"}
+    #banner
+      %h1 DiUS whitepages
+      #search
+        %input#query{:type => "text", :name => "term"}
+
+
     #contact-list
       %ul#contacts
         - contacts.each do |contact|

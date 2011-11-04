@@ -10,22 +10,18 @@
 		url('museo300/Museo300-Regular/Museo300-Regular.svg#Museo-300') format('svg');
 }
 
-h1 {
-    font-size: 30px;
-    font-weight: normal;
-    font-family: "Museo300", "Helvetica Neue", "Helvetica";
-}
-
 body {
-  max-device-width: 480px;
-  -webkit-text-size-adjust:none;
-  font-size: 30px;
+  margin: 0;
+  width: 320px;
+  /*max-device-width: 480px;*/
+  /*-webkit-text-size-adjust:none;*/
+  font-size: 18px;
   ul {
     list-style-type: none;
     padding-left: 0;
     li {
       margin: 0px;
-      padding: 10px 5px 10px 0;
+      padding: 2px 2px 2px 0;
 	  border-bottom: 1px solid #b9b9b9;
       border-radius: 5px;
     }
@@ -35,15 +31,15 @@ body {
 	#contacts{
 		img {
 			display: inline-block;
-			width: 60px;
-			height:60px;
+			width: 40px;
+			height: 40px;
 		}
 		span {
 			display: inline-block;
 		}
 		span.name, span.number{
 			display: block;
-			line-height: 30px;
+			line-height: 25px;
 		}
 	}
   }
@@ -52,6 +48,42 @@ body {
   }
 }
 
-#query {
-    width: 100%;
+#banner {
+    width: 320px;
+    height: 32px;
+    background-image: url(images/banner-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    padding: 0;
+
+    h1 {
+        font-size: 12px;
+        font-weight: normal;
+        font-family: "Museo300", "Helvetica Neue", "Helvetica";
+        color: white;
+        display: inline;
+        position: relative;
+        left: 50px;
+        top: 8px;
+    }
+
+    #search {
+        display: inline;
+        position: relative;
+        width: 213px;
+        left: 70px;
+        top: 10px;
+    }
+
+    #query {
+        height: 19px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        background-image: url(images/search.png);
+        background-position: 2px center;
+        background-repeat: no-repeat;
+        border: 1px solid #CCD8DB;
+        padding: 0 0 0 20px;
+    }
 }
