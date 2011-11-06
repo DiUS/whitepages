@@ -26,23 +26,8 @@ body {
       border-radius: 5px;
     }
   }
-  #contact-list{
-    @include base;
-	#contacts{
-		img {
-			display: inline-block;
-			width: 40px;
-			height: 40px;
-		}
-		span {
-			display: inline-block;
-		}
-		span.name, span.number{
-			display: block;
-			line-height: 25px;
-		}
-	}
-  }
+
+
   #search{
     @include base;
   }
@@ -85,5 +70,22 @@ body {
         background-repeat: no-repeat;
         border: 1px solid #CCD8DB;
         padding: 0 0 0 20px;
+    }
+}
+
+#contacts{
+    @include base;
+    img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+    div {
+        display: inline-block;
+    }
+    span.name, span.number{
+        display: block;
+        line-height: 25px;
     }
 }

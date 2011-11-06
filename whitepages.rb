@@ -5,25 +5,37 @@ require 'haml'
 require 'json'
 
 get '/', :provides => 'html' do
-  contacts = JSON.parse mockData
+  contacts = JSON.parse mock_data
   haml :index, :locals => { :contacts => contacts }
 end
 
+def mock_data
+  data  = search_contacts
+  data.each_with_index.map {|contact, index| contact[:avatar] = "images/dius#{index % 3 + 1}.png"}
+  JSON.generate(data)
+end
+
 get '/search' do
-  "searching for #{params[:term]}..."
+  content_type :json
+  contacts = search_contacts params[:keyword]
+  contacts.to_json
 end
 
 get '/style.css' do
     scss :'/style'
 end
 
-def mockData
-  data  = [
+def search_contacts(keyword = '')
+  contacts = [
     {:name => 'Ren Shao', :number => '0431 123 456',},
     {:name => 'Mitko', :number => '0430 123 456'},
     {:name => 'Stephen', :number => '0430 123 456'},
     {:name => 'Ken', :number => '0430 123 456'}
   ]
-  data.each_with_index.map {|contact, index| contact[:avatar] = "images/dius#{index % 3 + 1}.png"}
-  JSON.generate(data)
+
+  unless keyword.empty?
+    contacts.delete_at 3
+  end
+
+  contacts
 end

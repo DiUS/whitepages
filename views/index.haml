@@ -3,7 +3,11 @@
     %meta{:name => 'viewport', :content => 'user-scalable=no, width=device-width'}
     %title DiUS Whitepages
     =stylesheet_link_tag 'style.css'
-    / The other functions are link_to, javascript_script_tag, and image_tag
+
+    %link{:type => "text/css", :href => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css", :rel => "Stylesheet" }
+    %script{:type => "text/javascript", :src  => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"}
+    %script{:type => "text/javascript", :src  => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"}
+    %script{:type => "text/javascript", :src  => "/scripts/search.js"}
   %body
     #banner
       %h1 DiUS whitepages
@@ -16,6 +20,6 @@
         - contacts.each do |contact|
           %li 
             =image_tag contact['avatar']
-            %span
+            %div
               %span.name= contact['name'] 
               %span.number= contact['number'] 
